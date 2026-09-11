@@ -4,9 +4,10 @@ import 'package:goran/config/index.dart';
 import 'package:goran/providers/index.dart';
 import 'package:goran/screens/index.dart';
 
-void main() {
+void main() async {
   // ئامادەکردنی Flutter پێش دەستپێکردنی ئەپەکە.
   WidgetsFlutterBinding.ensureInitialized();
+  await FirebaseConfig.initialize();
   runApp(const WorkforceApp());
 }
 

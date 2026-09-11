@@ -5,11 +5,12 @@ class FirebaseConfig {
     try {
       await Firebase.initializeApp(
         options: const FirebaseOptions(
-          apiKey: 'YOUR_API_KEY',
-          appId: 'YOUR_APP_ID',
-          messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-          projectId: 'your-project-id',
-          storageBucket: 'your-storage-bucket',
+          apiKey: 'AIzaSyAXFSdKvlIqRMffocPNDpdhU1YUvZNj-XdI',
+          appId: '1:691261568325:web:38787f48c560f04d504e2c',
+          messagingSenderId: '691261568325',
+          projectId: 'goran-factory',
+          authDomain: 'goran-factory.firebaseapp.com',
+          storageBucket: 'goran-factory.firebasestorage.app',
         ),
       );
       print('Firebase initialized successfully');
