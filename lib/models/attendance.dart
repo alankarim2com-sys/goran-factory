@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 enum AttendanceType {
   fullDay, // کارکردنی تەواوی ڕۆژ و وەرگرتنی ١٠٠٪ی کرێ.

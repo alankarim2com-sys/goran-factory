@@ -10,7 +10,7 @@ class AddEmployeeDialog extends StatefulWidget {
   )
   onSubmit;
 
-  const AddEmployeeDialog({Key? key, required this.onSubmit}) : super(key: key);
+  const AddEmployeeDialog({super.key, required this.onSubmit});
 
   @override
   State<AddEmployeeDialog> createState() => _AddEmployeeDialogState();
@@ -141,13 +141,13 @@ class AttendanceMarkDialog extends StatefulWidget {
   final Function(AttendanceType type, String? notes) onSubmit;
 
   const AttendanceMarkDialog({
-    Key? key,
+    super.key,
     required this.employeeId,
     required this.employeeName,
     required this.dailySalary,
     required this.selectedDate,
     required this.onSubmit,
-  }) : super(key: key);
+  });
 
   @override
   State<AttendanceMarkDialog> createState() => _AttendanceMarkDialogState();
@@ -268,10 +268,10 @@ class EditEmployeeDialog extends StatefulWidget {
   onSubmit;
 
   const EditEmployeeDialog({
-    Key? key,
+    super.key,
     required this.employee,
     required this.onSubmit,
-  }) : super(key: key);
+  });
 
   @override
   State<EditEmployeeDialog> createState() => _EditEmployeeDialogState();

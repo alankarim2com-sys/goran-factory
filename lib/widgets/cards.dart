@@ -9,12 +9,12 @@ class EmployeeCard extends StatelessWidget {
   final VoidCallback? onEdit;
 
   const EmployeeCard({
-    Key? key,
+    super.key,
     required this.employee,
     required this.onTap,
     this.onDelete,
     this.onEdit,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +56,13 @@ class EmployeeCard extends StatelessWidget {
                           (context) => [
                             if (onEdit != null)
                               PopupMenuItem(
-                                child: const Text('Edit'),
                                 onTap: onEdit,
+                                child: const Text('Edit'),
                               ),
                             if (onDelete != null)
                               PopupMenuItem(
-                                child: const Text('Delete'),
                                 onTap: onDelete,
+                                child: const Text('Delete'),
                               ),
                           ],
                     ),
@@ -121,12 +121,12 @@ class AttendanceCard extends StatelessWidget {
   final VoidCallback? onDelete;
 
   const AttendanceCard({
-    Key? key,
+    super.key,
     required this.attendance,
     required this.employee,
     this.onEdit,
     this.onDelete,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -188,13 +188,13 @@ class AttendanceCard extends StatelessWidget {
                         (context) => [
                           if (onEdit != null)
                             PopupMenuItem(
-                              child: const Text('Edit'),
                               onTap: onEdit,
+                              child: const Text('Edit'),
                             ),
                           if (onDelete != null)
                             PopupMenuItem(
-                              child: const Text('Delete'),
                               onTap: onDelete,
+                              child: const Text('Delete'),
                             ),
                         ],
                   ),
@@ -225,8 +225,7 @@ class SalaryCard extends StatelessWidget {
   final SalaryRecord record;
   final Employee employee;
 
-  const SalaryCard({Key? key, required this.record, required this.employee})
-    : super(key: key);
+  const SalaryCard({super.key, required this.record, required this.employee});
 
   String getMonthName(int month) {
     const monthNames = [
@@ -310,11 +309,10 @@ class _StatColumn extends StatelessWidget {
   final Color? valueColor;
 
   const _StatColumn({
-    Key? key,
     required this.label,
     required this.value,
     this.valueColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

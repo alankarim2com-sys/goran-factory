@@ -16,8 +16,9 @@ class DashboardScreen extends StatelessWidget {
     // پیشاندانی سەرەکی تەنها دوای خوێندنەوەی داتا.
     return Consumer<AppDataProvider>(
       builder: (context, data, _) {
-        if (!data.isReady)
+        if (!data.isReady) {
           return const Center(child: CircularProgressIndicator());
+        }
         final today = DateTime.now();
         final summaries = data.monthSummaries;
         final monthDue = summaries.fold<double>(

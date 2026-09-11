@@ -20,8 +20,9 @@ class _EmployeeManagementScreenState extends State<EmployeeManagementScreen> {
     // لیستی کرێکاران و کۆی مووچەی ڕۆژانە لێرە پیشان دەدرێت.
     return Consumer<AppDataProvider>(
       builder: (context, data, _) {
-        if (!data.isReady)
+        if (!data.isReady) {
           return const Center(child: CircularProgressIndicator());
+        }
         final employees = data.employees;
         return Scaffold(
           appBar: AppBar(

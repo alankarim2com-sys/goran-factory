@@ -21,8 +21,9 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
     // هەموو کرێکاران پیشان دەدرێن، تەنانەت ئەگەر هێشتا دۆخیان دیاری نەکرابێت.
     return Consumer<AppDataProvider>(
       builder: (context, data, _) {
-        if (!data.isReady)
+        if (!data.isReady) {
           return const Center(child: CircularProgressIndicator());
+        }
         final marked =
             data.allEmployees
                 .where(
@@ -118,11 +119,12 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                                   date: _selectedDate,
                                   type: type,
                                 );
-                                if (context.mounted)
+                                if (context.mounted) {
                                   _showMessage(
                                     context,
                                     '${employee.name}: ${type.displayName}',
                                   );
+                                }
                               },
                             );
                           },

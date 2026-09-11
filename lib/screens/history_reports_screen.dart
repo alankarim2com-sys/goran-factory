@@ -13,8 +13,9 @@ class HistoryReportsScreen extends StatelessWidget {
     // هەموو شایستەیی و پارەدانەکان بەپێی مانگی هەڵبژێردراو حساب دەکرێن.
     return Consumer<AppDataProvider>(
       builder: (context, data, _) {
-        if (!data.isReady)
+        if (!data.isReady) {
           return const Center(child: CircularProgressIndicator());
+        }
         final summaries = data.monthSummaries;
         return Scaffold(
           appBar: AppBar(title: const Text('ڕاپۆرتی مانگانە')),

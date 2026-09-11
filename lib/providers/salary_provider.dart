@@ -6,8 +6,8 @@ class SalaryProvider extends ChangeNotifier {
   final FirestoreService _firestoreService = FirestoreService();
 
   SalaryRecord? _currentMonthSalary;
-  List<SalaryRecord> _salaryHistory = [];
-  bool _isLoading = false;
+  final List<SalaryRecord> _salaryHistory = [];
+  final bool _isLoading = false;
   String? _error;
   int _selectedYear = DateTime.now().year;
   int _selectedMonth = DateTime.now().month;
@@ -25,14 +25,14 @@ class SalaryProvider extends ChangeNotifier {
     int? year,
     int? month,
   }) {
-    final _year = year ?? DateTime.now().year;
-    final _month = month ?? DateTime.now().month;
+    final year0 = year ?? DateTime.now().year;
+    final month0 = month ?? DateTime.now().month;
 
     _firestoreService
         .getSalaryRecordStream(
           employeeId: employeeId,
-          year: _year,
-          month: _month,
+          year: year0,
+          month: month0,
         )
         .listen(
           (record) {
