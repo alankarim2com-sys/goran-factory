@@ -323,7 +323,7 @@ class _AttendanceEmployeeCard extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 _StatusButton(
-                  label: 'نیوەڕۆژ',
+                  label: 'new day',
                   icon: Icons.timelapse,
                   color: AppTheme.warningColor,
                   selected: selected == AttendanceType.halfDay,
@@ -447,7 +447,7 @@ class _NoEmployees extends StatelessWidget {
             OutlinedButton.icon(
               onPressed: onTap,
               icon: const Icon(Icons.arrow_back),
-              label: const Text('چۆن کرێکار زیاد بکەم؟'),
+              label: const Text('add a krekar'),
             ),
           ],
         ),
